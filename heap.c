@@ -11,7 +11,7 @@ static inline uintptr_t allign_forward_uintptr(uintptr_t ptr, size_t alignmenet)
 }
 
 void la_init(LinearAllocator *la, void* buffer, size_t capacity){
-	la->buffer = (uint8_t *) buffer; //starting of the address pool
+	la->buffer = (uint8_t *) buffer;  //starting of the address pool
 	la->capacity = capacity;
 	la->offset = 0;
 }
