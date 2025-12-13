@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<stdint.h>
 #include<string.h>
-#include<"heap.h"> //Our public API 
+#include<"heap.h"> // public API 
 /* LinearAllocator 
  * la_init
  * la_reset
