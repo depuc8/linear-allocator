@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<stdint.h>
 #include<string.h>
-#include<"heap.h"> // public API 
+#include "heap.h" // public API 
 /* LinearAllocator 
  * la_init
  * la_reset
@@ -37,7 +37,7 @@ int main(void){
 	printf("pool=%p capacity=%zu\n", p3, la_capacity(&la));
 
 	if (p1) memset(p1,0xAA,100); //writing all the values to 0xAA 
-	if (p2) memseet(p2,0xBB,200);//writing all the values to 0xBB
+	if (p2) memset(p2,0xBB,200);//writing all the values to 0xBB
 
 	//reseting the bump pointer to base
 	la_reset(&la);
