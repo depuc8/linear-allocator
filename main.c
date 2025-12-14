@@ -21,8 +21,7 @@ int main(void){
 		return 1;
 	}
 	
-	//initilizing bump pointer
-	LinearAllocator la; 
+	LinearAllocator la; //initilizing bump pointer
 	la_init(&la,pool,POOL_SIZE);
 
 	printf("pool=%p capacity=%zu\n", (void*) pool, la_capacity(&la));
