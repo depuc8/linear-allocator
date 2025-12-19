@@ -1,10 +1,6 @@
 ## Linear-allocator/Arena allocator
-A linear allocator is a derivative of maloc where we use malloc to assign us 
-a block of memory and then use this block of memory linearly with the help of 
-a bump pointer techinaclly a break not for the heap but for or linear block 
-which expands on demand and no further expansion of the bump pointer takes place 
-once we hit the break of out heap 
+A linear allocator (also known as an arena allocator) is a memory allocation strategy that uses a single call to malloc (or a similar function) to reserve a large contiguous block of memory. Memory is then allocated linearly from this block using a bump pointer.
 
-This repoitory walks you through on implementation of the linear allocator 
-I have added proer comments in the respective files which should help on how this
-can be implemented 
+The bump pointer advances as allocations are made, similar to a program break, but it operates entirely within the preallocated memory block rather than the heap itself. Once the allocator reaches the end of the memory pool, no further allocations can be made unless the arena is reset or expanded.
+
+This repository walks through an implementation of a linear allocator. Proper comments have been added to the relevant files to help explain how the allocator works and how it can be implemented
